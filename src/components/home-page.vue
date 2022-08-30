@@ -13,37 +13,21 @@
 					text-color="#fff"
 					active-text-color="#ffd04b"
 					router
+					unique-opened
 				>
-					<el-submenu index="1">
+					<el-menu-item v-for="item in jequlist" :key="item.id" :index="item.path">
+						<i :class="item.icon"></i>
+						<span slot="title">{{ item.name }}</span>
+					</el-menu-item>
+					<el-submenu v-for="item in dataList" :key="item.id" :index="item.path">
 						<template slot="title">
-							<i class="el-icon-location"></i>
-							<span>导航一</span>
+							<i :class="item.icon"></i>
+							<span>{{ item.name }}</span>
 						</template>
-						<el-menu-item-group>
-							<template slot="title">分组一</template>
-							<el-menu-item index="1-1">选项1</el-menu-item>
-							<el-menu-item index="1-2">选项2</el-menu-item>
+						<el-menu-item-group v-for="item1 in item.children" :key="item1.id">
+							<el-menu-item :index="item1.path">{{ item1.name }}</el-menu-item>
 						</el-menu-item-group>
-						<el-menu-item-group title="分组2">
-							<el-menu-item index="1-3">选项3</el-menu-item>
-						</el-menu-item-group>
-						<el-submenu index="1-4">
-							<template slot="title">选项4</template>
-							<el-menu-item index="1-4-1">选项1</el-menu-item>
-						</el-submenu>
 					</el-submenu>
-					<el-menu-item index="2">
-						<i class="el-icon-menu"></i>
-						<span slot="title">导航二</span>
-					</el-menu-item>
-					<el-menu-item index="3" disabled>
-						<i class="el-icon-document"></i>
-						<span slot="title">导航三</span>
-					</el-menu-item>
-					<el-menu-item index="/first-page">
-						<i class="el-icon-setting"></i>
-						<span slot="title">导航四</span>
-					</el-menu-item>
 				</el-menu>
 			</el-aside>
 			<el-container>
@@ -95,7 +79,14 @@
 <script>
 export default {
 	data() {
-		return {}
+		return {
+			/**侧边栏数据 */
+			sidebar: [],
+			/**截取的首页 */
+			jequlist: [],
+			/**截取剩下的所有的数据 */
+			dataList: []
+		}
 	},
 
 	mounted() {},
@@ -108,7 +99,13 @@ export default {
 			console.log(key, keyPath)
 		}
 	},
-	created() {}
+	created() {
+		this.$http.get('/effect/user/menubars/').then((res) => {
+			this.sidebar = res.data.cebianlan
+			this.jequlist = this.sidebar.slice(0, 1)
+			this.dataList = this.sidebar.slice(1)
+		})
+	}
 }
 </script>
 

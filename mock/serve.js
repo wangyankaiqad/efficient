@@ -5,6 +5,7 @@ let Mock = require('mockjs')
 
 const loginData = require('./common/login.json')
 const loginRead = require('./common/loginRead.json')
+const cebianlan = require('./common/cebianlan.json')
 // 实例化express
 let app = express()
 // 登录接口
@@ -23,8 +24,18 @@ app.use('/home/loginsearch/', function (req, res) {
 	res.json(
 		Mock.mock({
 			status: 200,
-			msg: '登录成功',
+			msg: '获取日志成功',
 			loginRead
+		})
+	)
+})
+// 侧边栏的mock数据
+app.use('/user/menubars/', function (req, res) {
+	res.json(
+		Mock.mock({
+			status: 200,
+			msg: '获取侧栏成功',
+			cebianlan
 		})
 	)
 })

@@ -7,11 +7,10 @@ Vue.use(VueRouter)
 const routes = [
 	{
 		path: '/',
-		redirect: 'role-management'
+		redirect: 'home'
 	},
 	{
 		path: '/',
-		name: 'home',
 		component: login
 	},
 	// 大的页面  侧边栏
@@ -21,18 +20,23 @@ const routes = [
 		/**首页 */
 		children: [
 			{
-				path: '/first-page',
+				path: '/home',
 				component: () => import('../components/first-page.vue')
 			},
 			/**用户管理 */
 			{
-				path: '/user-management',
+				path: '/user',
 				component: () => import('../components/user-management.vue')
 			},
 			/**角色管理 */
 			{
-				path: '/role-management',
+				path: '/role',
 				component: () => import('../components/role-management.vue')
+			},
+			/**菜单管理 */
+			{
+				path: '/menus',
+				component: () => import('../components/menu-Management.vue')
 			}
 		]
 	}

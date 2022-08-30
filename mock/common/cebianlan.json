@@ -1,0 +1,226 @@
+[{
+        "id": 1,
+        "name": "首页",
+        "icon": "el-icon-s-home",
+        "path": "/home",
+        "menu_order": "1",
+        "children": []
+    },
+    {
+        "id": 2,
+        "name": "基础配置",
+        "icon": "el-icon-set-up",
+        "path": "/basis",
+        "menu_order": "2",
+        "children": [{
+                "id": 3,
+
+                "name": "用户管理",
+
+                "path": "/user",
+
+                "menu_order": "2-1"
+
+            },
+            {
+                "id": 4,
+
+                "name": "角色管理",
+
+                "path": "/role",
+
+                "menu_order": "2-2"
+
+            },
+            {
+                "id": 5,
+
+                "name": "权限管理",
+
+                "path": "/juris",
+
+                "menu_order": "2-3"
+
+            },
+            {
+                "id": 6,
+
+                "name": "菜单管理",
+
+                "path": "/menus",
+
+                "menu_order": "2-4"
+
+            },
+            {
+                "id": 7,
+
+                "name": "职级管理",
+
+                "path": "/rank",
+
+                "menu_order": "2-5"
+
+            },
+            {
+                "id": 8,
+
+                "name": "岗位管理",
+
+                "path": "/job",
+
+                "menu_order": "2-6"
+
+            },
+            {
+                "id": 9,
+
+                "name": "操作日志",
+
+                "path": "/oper",
+
+                "menu_order": "2-7"
+
+            },
+            {
+                "id": 10,
+
+                "name": "登录日志",
+
+                "path": "/login-oper",
+
+                "menu_order": "2-8"
+
+            },
+            {
+                "id": 11,
+
+                "name": "部门管理",
+
+                "path": "/divisional",
+
+                "menu_order": "2-9"
+
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "name": "配置工作流",
+        "icon": "el-icon-document",
+        "path": "/workflow",
+        "menu_order": "3",
+        "children": [{
+                "id": 13,
+
+                "name": "配置审批流程",
+
+                "path": "/approval",
+
+                "menu_order": "3-1"
+
+            },
+            {
+                "id": 14,
+
+                "name": "配置审批类型",
+
+                "path": "/approval-types",
+
+                "menu_order": "3-2"
+
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "name": "材料管理",
+        "icon": "el-icon-s-finance",
+        "path": "/material",
+        "menu_order": "4",
+        "children": [{
+            "id": 16,
+
+            "name": "材料管理",
+
+            "path": "/material-ment",
+
+            "menu_order": "4-1"
+
+        }]
+    },
+    {
+        "id": 17,
+        "name": "企业通讯",
+        "icon": "el-icon-phone-outline",
+        "path": "/firm",
+        "menu_order": "5",
+        "children": [{
+                "id": 18,
+
+                "name": "企业通信",
+
+                "path": "/firm-comm",
+
+                "menu_order": "5-1"
+
+            },
+            {
+                "id": 19,
+
+                "name": "工资条录入",
+
+                "path": "/salary-sheet",
+
+                "menu_order": "5-2"
+
+            }
+        ]
+    },
+    {
+        "id": 24,
+        "name": "合同管理",
+        "icon": "el-icon-wallet",
+        "path": "/contract",
+        "menu_order": "6",
+        "children": []
+    },
+    {
+        "id": 20,
+        "name": "OA审批",
+        "icon": "el-icon-user",
+        "path": "/oa-approve",
+        "menu_order": "7",
+        "children": [{
+                "id": 21,
+
+                "name": "待办事项",
+
+                "path": "/backlog",
+
+                "menu_order": "7-1"
+
+            },
+            {
+                "id": 22,
+
+                "name": "已办事项",
+
+                "path": "/finished",
+
+                "menu_order": "7-2"
+
+            },
+            {
+                "id": 23,
+
+                "name": "我发起的",
+
+                "path": "/started",
+
+                "menu_order": "7-3"
+
+            }
+        ]
+    }
+]

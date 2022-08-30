@@ -125,11 +125,11 @@ export default {
 
 		option && myChart.setOption(option)
 
-		var chartDom = document.getElementById('biao')
-		var myChart = echarts.init(chartDom)
-		var option
+		let chartDom1 = document.getElementById('biao')
+		let myChart1 = echarts.init(chartDom1)
+		let option1
 
-		option = {
+		option1 = {
 			xAxis: {
 				type: 'category',
 				data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
@@ -148,7 +148,7 @@ export default {
 			]
 		}
 
-		option && myChart.setOption(option)
+		option && myChart1.setOption(option1)
 	},
 
 	methods: {}

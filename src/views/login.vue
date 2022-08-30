@@ -57,16 +57,11 @@
 </template>
 
 <script>
-import axios from 'axios'
+// import axios from 'axios'
 export default {
+	name: 'LoginView',
 	created() {
-		// const loginInfo = {
-		// 	name: '小红',
-		// 	password: '123',
-		// 	code: 123
-		// }
-
-		axios.get('/effect/home/loginsearch').then((res) => {
+		this.$http.get('/effect/home/loginsearch').then((res) => {
 			console.log(res, '登录日志')
 		})
 	},
@@ -99,7 +94,7 @@ export default {
 			this.$refs.form.validate((aa) => {
 				if (!aa) return
 
-				axios.post('/effect/user/login', this.form).then((res) => {
+				this.$http.post('/effect/user/login', this.form).then((res) => {
 					console.log(res)
 					if (res.data.status == 200) {
 						// 跳转到主页面
